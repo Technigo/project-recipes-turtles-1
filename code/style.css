@@ -1,0 +1,84 @@
+* { /*Shows boxes for everything for easier placement */
+    border: 1px solid blue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    width: 60px;
+    background: blue;
+}
+
+.search-desktop {
+    display: none;
+}
+
+.login-menu {
+    display: none;
+}
+
+.hamburger-menu {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    background: black;
+    padding: 10px 10px;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 5px;
+    background: white;  
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    display: none;
+}
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 768px) {
+
+}
+
+
+@media (min-width: 992px) {
+
+    .login-menu {
+        display: flex;
+    }
+    .hamburger-menu {
+        display: none;
+    }
+    .search-desktop {
+        display: flex;
+    }
+    
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        background-color: coral;
+    }
