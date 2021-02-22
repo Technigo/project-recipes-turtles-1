@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,7 @@
 <body>
     <header>
         <img class="logo" src="" alt="Logo">
-        <input type="text" class="search-header">
+        <input type="text" class="search-desktop" id="searchDesktop">
         <div class="Menu-wrapper">
             <nav class="login-menu">
                 <a src="">Log In</a>
@@ -23,6 +22,32 @@
             </div>
         </div>
     </header>
+    <aside>
+        <section class="food-icons-aside" id="foodIconsAside">food icons aside</section>
+        <form action="">
+            <div class="radio-buttons" id="radioButtons">
+                <input type="radio" name="search-criteria" class="cooking-time" id="cookingTime">
+                    <label for="cookingTime">Cooking Time</label>
+                <input type="radio" name="search-criteria" class="number-ingredients" id="numberIngredients">
+                    <label for="numberIngredients">Number of Ingredients</label>
+            </div>
+            <div class="omit-ingredients" id="omitIngredients">
+                <input type="checkbox" class="no-gluten" id="noGluten">
+                    <label for="noGluten">gluten</label>
+                <input type="checkbox" class="no-dairy" id="noDairy">
+                    <label for="noDairy">noDairy</label>
+                <input type="checkbox" class="no-nuts" id="noNuts">
+                    <label for="noNuts">Nuts</label>
+                             
+                    
+            </div>
+        </form>            
+    </aside>
+    <input type="text" class="search-mobile" id="searchMobile">    
+    <section class="food-icons" id="foodIcons">food icons</section>
+    <section class="recipe-card-container" id="recipeCardContainer">Recipe Cards</section>
+
+    <footer>Footer</footer> 
 
 
 
@@ -30,8 +55,7 @@
 
 
 
-
-
+    <script src="dummy-response.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
