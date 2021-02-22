@@ -77,7 +77,7 @@ header {
     
     }
 
-    aside {
+    .side-menu {
         display: flex;
         flex-direction: column;
         background-color: coral;
