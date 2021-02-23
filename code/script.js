@@ -5,8 +5,6 @@
 
 //USE THIS ONE prepared:
 //https://api.edamam.com/search?q=chicken&app_id=862cfc80&app_key=8cf170ea0a78c419b8138ce6586f7ea1&from=0&to=3&calories=591-722&health=alcohol-free
-const RECIPE_URL =
-  "https://api.edamam.com/search?q=chicken&app_id=862cfc80&app_key=8cf170ea0a78c419b8138ce6586f7ea1&from=0&to=3&calories=591-722&health=alcohol-free";
 const searchDesktop = document.getElementById('searchDesktop')
 const searchMobile = document.getElementById('searchMobile')
 const submitButtonMobile = document.getElementById('submit-button-mobile')
@@ -15,7 +13,11 @@ const recipeCardContainer = document.getElementById('recipeCardContainer')
 
 console.log('hello!')
 
-const fetchRealData = () => {
+const fetchRealData = (data) => {
+  const RECIPE_URL =
+  `https://api.edamam.com/search?q=${data}&app_id=49c13027&app_key=287070e6f49848d6d763d073bd805118&from=0&to=10&calories=591-722&health=alcohol-free`;
+
+  
   fetch(RECIPE_URL)
   .then((response) => {
     if (response.ok) {
@@ -25,6 +27,7 @@ const fetchRealData = () => {
   })
 
   .then((data) => {
+    console.log(data)
     console.log(data.hits[2].recipe.label);
     console.log(data.hits[0].recipe.ingredientLines[0]);
     console.log(data.hits[0].recipe.image);
@@ -50,7 +53,7 @@ const fetchRealData = () => {
   });
 }
 
-fetchRealData()
+//fetchRealData()
 
 const fetchData = (data) => {
   console.log(data)
@@ -58,12 +61,12 @@ const fetchData = (data) => {
 
 submitButtonMobile.addEventListener('click', event => {
   event.preventDefault();
-  fetchData (searchMobile.value)
+  fetchRealData (searchMobile.value)
 })
 
 submitButtonDesktop.addEventListener('click', event => {
   event.preventDefault();
-  fetchData (searchDesktop.value)
+  fetchRealData (searchDesktop.value)
 })
 
 console.log(dummyResponse.hits[0].recipe.label);
