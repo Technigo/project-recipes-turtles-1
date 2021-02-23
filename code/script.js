@@ -50,7 +50,7 @@ const fetchRealData = () => {
   });
 }
 
-//fetchRealData()
+fetchRealData()
 
 const fetchData = (data) => {
   console.log(data)
